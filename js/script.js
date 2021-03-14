@@ -29,3 +29,10 @@ function newItem() {
   // 4. Reorder the items
   $('#list').sortable();
 }
+$(document).on('keypress',function(e) {
+  
+  if(e.which == 13) {
+    e.preventDefault();
+    newItem();
+  }
+});
